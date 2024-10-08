@@ -216,7 +216,7 @@ CREATE TABLE `zp_service_messages`  (
   `service` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `message` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `created_at` datetime NOT NULL DEFAULT current_timestamp,
-  `solved_reason` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `solved_reason` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `service`(`service` ASC) USING BTREE,
   INDEX `service_solved_by_citizenid`(`solved_by_citizenid` ASC, `service` ASC) USING BTREE
